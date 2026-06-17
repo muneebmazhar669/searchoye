@@ -16,11 +16,27 @@
         <a href="index.html" class="logo-link">
             <img src="Group 4.png" alt="SearchOye" class="header-logo">
         </a>
-        <div id="search-bar" class="header-search-bar">
-            <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
-            <i class="icon-search" id="search-btn"></i>
+        <div class="search-wrapper">
+            <div id="search-bar" class="header-search-bar">
+                <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+                <i class="icon-search" id="search-btn"></i>
+            </div>
+            <div id="suggestions-box" class="suggestions-box"></div>
         </div>
     </header>
+
+    <!-- TABS -->
+    <nav class="results-tabs">
+        <button class="tab-btn active" data-tab="all">
+            <i class="icon-layout-list"></i> All
+        </button>
+        <button class="tab-btn" data-tab="images">
+            <i class="icon-image"></i> Images
+        </button>
+        <button class="tab-btn" data-tab="videos">
+            <i class="icon-youtube"></i> Videos
+        </button>
+    </nav>
 
     <!-- RESULTS AREA -->
     <main class="results-main">
