@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <img src="Group 4.png" alt="searchoye">
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+            <i class="icon-search" id="search-btn"></i>
+        </div>
+    </div>
+    <footer>
+        <span id="sp1">
+                <h5>Pakistan's First Search Engine <a href="">SearchOye</a></h5>
+            </span>
+            <span id="sp2">
+                <a href="">Terms</a><h5>&</h5><a href="">Conditions</a>
+            </span>
+            <span>
+                <h5>copyright©2025.All right reserved</h5>
+            </span>
+    </footer>
+
+    <script>
+        const input = document.getElementById('search-input');
+        const btn   = document.getElementById('search-btn');
+
+        function doSearch() {
+            const q = input.value.trim();
+            if (!q) return;
+            window.location.href = `results.html?q=${encodeURIComponent(q)}`;
+        }
+
+        btn.addEventListener('click', doSearch);
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* ── results.css ── SearchOye results page styles ── */
+
+/* Override body height so page can scroll */
+body.results-page {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── HEADER ── */
+.results-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 40px;
+    background-color: #2a2e33;
+    border-bottom: 1px solid #3d4249;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-link {
+    flex-shrink: 0;
+}
+
+.header-logo {
+    height: 36px;
+    display: block;
+}
+
+/* Reuse #search-bar styles from style.css but adapt for header */
+.header-search-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #F6F6F6;
+    align-items: center;
+    border-radius: 100px;
+    padding: 7px 10px;
+    width: 100%;
+    max-width: 620px;
+}
+
+.header-search-bar input {
+    color: #4f4e4e;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* ── MAIN ── */
+.results-main {
+    flex: 1;
+    padding: 28px 40px 40px 40px;
+    max-width: 760px;
+}
+
+/* Meta line: "About 12 results" */
+.results-meta {
+    color: #6e7681;
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
+
+/* ── RESULT CARD ── */
+.result-card {
+    margin-bottom: 28px;
+}
+
+.result-url {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.result-favicon {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.result-domain {
+    color: #00C978;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.result-title {
+    display: block;
+    color: #e8eaed;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.35;
+    margin-bottom: 5px;
+    transition: color 0.15s ease;
+}
+
+.result-title:hover {
+    color: #00C978;
+    text-decoration: underline;
+}
+
+.result-snippet {
+    color: #9aa0a6;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* ── DIVIDER between cards ── */
+.result-card + .result-card {
+    padding-top: 28px;
+    border-top: 1px solid #3d4249;
+}
+
+/* ── STATES ── */
+
+/* Loading skeleton */
+.skeleton-card {
+    margin-bottom: 28px;
+}
+
+.skeleton-line {
+    background: linear-gradient(90deg, #3a3f45 25%, #44494f 50%, #3a3f45 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-line.url   { height: 13px; width: 160px; }
+.skeleton-line.title { height: 20px; width: 80%; }
+.skeleton-line.snip1 { height: 13px; width: 100%; }
+.skeleton-line.snip2 { height: 13px; width: 70%; }
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Error / empty state */
+.state-message {
+    color: #9aa0a6;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.state-message span {
+    color: #00C978;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+    .results-header {
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .header-search-bar {
+        max-width: 100%;
+    }
+
+    .results-main {
+        padding: 20px 16px 32px;
+    }
+
+    .result-title {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 6px;
+        padding: 20px 16px;
+    }
+}

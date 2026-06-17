@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchOye — Results</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="results.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
+</head>
+<body class="results-page">
+
+    <!-- TOP BAR -->
+    <header class="results-header">
+        <a href="index.html" class="logo-link">
+            <img src="Group 4.png" alt="SearchOye" class="header-logo">
+        </a>
+        <div id="search-bar" class="header-search-bar">
+            <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+            <i class="icon-search" id="search-btn"></i>
+        </div>
+    </header>
+
+    <!-- RESULTS AREA -->
+    <main class="results-main">
+        <p id="results-meta" class="results-meta"></p>
+        <div id="results-container"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <span id="sp1">
+            <h5>Pakistan's First Search Engine <a href="index.html">SearchOye</a></h5>
+        </span>
+        <span id="sp2">
+            <a href="">Terms</a><h5>&</h5><a href="">Conditions</a>
+        </span>
+        <span>
+            <h5>copyright©2025.All right reserved</h5>
+        </span>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>
