@@ -68,7 +68,7 @@ footer{
 }
 footer span{
     display: inline-flex;gap: 3px;
-    color: #A1A1A1
+    color: #A1A1A1;
 }
 footer #sp1 a{
     color: #00C978;
