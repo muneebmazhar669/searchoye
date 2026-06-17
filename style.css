@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -26,11 +25,10 @@ body{
     background-color: #F6F6F6 ;align-items: center;
     border-radius: 100px;padding: 7px 10px;
     width: 100%;
-    max-width: 700px;
+    max-width: 700px;min-width: 500px;
     
 
 }
-
 .icon-search{
     padding: 15px;color: #00C978;background-color:#eaeaea;
     border-radius: 100px;width: 40px;height: 40px;
@@ -51,29 +49,13 @@ footer{
     display: flex;justify-content: space-between;
     padding: 25px 50px;
 }
-
 footer span{
     display: inline-flex;gap: 3px;
-    color: #A1A1A1;
+    color: #A1A1A1
 }
 footer #sp1 a{
     color: #00C978;
 }
 footer #sp2 a{
     color: #E46E70;
-}
-@media (max-width:600px) {
-    footer{
-        flex-direction: column;
-    }
-    .main-container img{
-    height: 40px;
-    }
-    /* body{
-        padding:  10px;
-        padding-top: 0px;
-    } */
-    #search-bar{
-        margin-bottom: 300px;
-    }
 }
