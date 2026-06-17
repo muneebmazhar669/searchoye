@@ -51,10 +51,12 @@ footer{
     display: flex;justify-content: space-between;
     padding: 25px 50px;
 }
-@media (max-width:600px){
+@media (max-width:600px) {
     footer{
-        flex-direction:column
+        flex-direction: column;
     }
+    .main-container img{
+    height: 40px;
 }
 footer span{
     display: inline-flex;gap: 3px;
