@@ -57,10 +57,9 @@ input.addEventListener('blur', () => {
 
 async function fetchSuggestions(q) {
     try {
-        const res  = await fetch(`https://duckduckgo.com/ac/?q=${encodeURIComponent(q)}&type=list`);
-        const data = await res.json();
-        const suggestions = data[1] || [];
-        renderSuggestions(suggestions.slice(0, 6));
+        const res  = await fetch(`${WORKER_URL}?suggest=${encodeURIComponent(q)}`);
+        const suggestions = await res.json();
+        renderSuggestions(Array.isArray(suggestions) ? suggestions : []);
     } catch { hideSuggestions(); }
 }
 
