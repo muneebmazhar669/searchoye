@@ -57,6 +57,14 @@ footer{
     }
     .main-container img{
     height: 40px;
+    }
+    body{
+        padding: 30px;
+        padding-top: 0px;
+    }
+    #search-bar{
+        margin-bottom: 100px;
+    }
 }
 footer span{
     display: inline-flex;gap: 3px;
