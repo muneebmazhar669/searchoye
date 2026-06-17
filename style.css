@@ -30,6 +30,7 @@ body{
     
 
 }
+
 .icon-search{
     padding: 15px;color: #00C978;background-color:#eaeaea;
     border-radius: 100px;width: 40px;height: 40px;
@@ -49,6 +50,11 @@ body{
 footer{
     display: flex;justify-content: space-between;
     padding: 25px 50px;
+}
+@media (max-width:600px){
+    footer{
+        flex-direction:column
+    }
 }
 footer span{
     display: inline-flex;gap: 3px;
