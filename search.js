@@ -4,7 +4,7 @@
 // CONFIG — point this to YOUR Cloudflare Worker
 // No API key here. Ever.
 // ─────────────────────────────────────────────
-const WORKER_URL = 'https://muddy-lake-6bdc.muneebmazhar669.workers.dev/';
+const WORKER_URL = 'https://muddy-lake-6bdc.muneebmazhar669.workers.dev';
 // Example: 'https://searchoye.your-subdomain.workers.dev'
 
 // ─────────────────────────────────────────────
