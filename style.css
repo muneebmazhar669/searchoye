@@ -51,21 +51,7 @@ footer{
     display: flex;justify-content: space-between;
     padding: 25px 50px;
 }
-@media (max-width:600px) {
-    footer{
-        flex-direction: column;
-    }
-    .main-container img{
-    height: 40px;
-    }
-    body{
-        padding:  10px;
-        padding-top: 0px;
-    }
-    #search-bar{
-        margin-bottom: 100px;
-    }
-}
+
 footer span{
     display: inline-flex;gap: 3px;
     color: #A1A1A1;
@@ -75,4 +61,19 @@ footer #sp1 a{
 }
 footer #sp2 a{
     color: #E46E70;
+}
+@media (max-width:600px) {
+    footer{
+        flex-direction: column;
+    }
+    .main-container img{
+    height: 40px;
+    }
+    /* body{
+        padding:  10px;
+        padding-top: 0px;
+    } */
+    #search-bar{
+        margin-bottom: 300px;
+    }
 }
