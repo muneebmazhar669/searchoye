@@ -373,7 +373,8 @@ body.results-page {
 }
 
 @media (max-width: 640px) {
-    .results-header { padding: 12px 16px; gap: 12px; flex-direction:column; }
+    .results-header { padding: 12px 16px; gap: 12px;
+                    flex-direction: column;}
     .results-tabs   { padding: 0 16px; }
     .results-main   { padding: 20px 16px 32px; }
     .images-grid    { grid-template-columns: repeat(2, 1fr); gap: 8px; }
