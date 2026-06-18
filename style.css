@@ -8,14 +8,18 @@
 body{
     font-family: 'Outfit', sans-serif;
     background-color: #31353A;
-    width: 100%;height: 100%;
+    width: 100%;height: 100wh;
   
 }
 /* main-container */
+.main-supercont{
+    display: flex;flex-direction: column;justify-content: space-between;
+    height: 100vh;
+}
 .main-container{
     display: flex;align-items: center;justify-content: center;
-    flex-direction: column;gap: 20px;
-    width: 100%;height: 100vh;
+    flex-direction: column;gap: 20px;padding: 0px 20px;
+    width: 100%; height: 90vh;margin-top: -50px;
 }
 .main-container img{
     height: 60px;
@@ -24,20 +28,20 @@ body{
     display: flex;justify-content: space-between;gap: 10px;
     background-color: #F6F6F6 ;align-items: center;
     border-radius: 100px;padding: 7px 10px;
-    width: 100%;
-    max-width: 700px;min-width: 500px;
+    width: 100%;margin: 10px;
+    max-width: 700px;height: 55px;
     
 
 }
 .icon-search{
-    padding: 15px;color: #00C978;background-color:#eaeaea;
-    border-radius: 100px;width: 40px;height: 40px;
+    padding: 15px;color: #00C978;background-color:#dbdbdb;
+    border-radius: 100px;height: 40px;
     display: flex;align-items: center;justify-content: center;
 }
 #search-bar input{
     color: #4f4e4e;padding: 12px;border-style: none;
     border-radius: 100px;outline: none;
-    background-color: transparent;
+    background-color: transparent;width: 100%;
 }
 ::placeholder{
     color: #A9A9A9;
@@ -47,7 +51,7 @@ body{
 
 footer{
     display: flex;justify-content: space-between;
-    padding: 25px 50px;
+    padding: 25px 50px;justify-self: flex-end;
 }
 footer span{
     display: inline-flex;gap: 3px;
@@ -58,4 +62,22 @@ footer #sp1 a{
 }
 footer #sp2 a{
     color: #E46E70;
+}
+@media (max-width:600px) {
+    .main-container{
+        margin-top: -220px;
+    }
+    .main-container img{
+    height: 30px;margin-top: 20px;
+}
+    .main-container #search-bar{
+        margin: 10px; height: 40px;padding-right: 5px;
+        
+    }
+    .icon-search{
+        height: 30px;
+    }
+    footer{
+        flex-direction: column;
+    }
 }
